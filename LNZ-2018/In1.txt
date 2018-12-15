@@ -1,0 +1,26 @@
+num function func(num x, num y)
+{
+  var num z;
+  z = 2*(x + y);
+  return z;
+};
+main
+{
+ var num x;
+ var num y;
+ var num z;
+ var list sa;
+ var list sb;
+ x = 5;
+ amaout x; 
+ y = 3; 
+ amaout y;
+ sa = "AGA";
+ amaout sa;
+ sb = "PRiVET";
+ amaout sb;
+ sb = sb+" "+"SANYA, KADA VIEBISH MILFU! :)";
+ amaout sb;
+ amaout sqroot(144);
+}
+

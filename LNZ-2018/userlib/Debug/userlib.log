@@ -1,0 +1,4 @@
+﻿  stdafx.cpp
+  userlib.cpp
+d:\coursach\lnz-2018\userlib\userlib.cpp(38): warning C4244: return: преобразование "double" в "int", возможна потеря данных
+  userlib.vcxproj -> D:\Coursach\LNZ-2018\Debug\userlib.lib
