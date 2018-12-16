@@ -1,26 +1,26 @@
-num function func(num x, num y)
+int function func(int x, int y)
 {
-  var num z;
+  var int z;
   z = 2*(x + y);
   return z;
 };
 main
 {
- var num x;
- var num y;
- var num z;
- var list sa;
- var list sb;
+ var int x;
+ var int y;
+ var int z;
+ var string sa;
+ var string sb;
  x = 5;
- amaout x; 
+ out x; 
  y = 3; 
- amaout y;
+ out y;
  sa = "AGA";
- amaout sa;
- sb = "PRiVET";
- amaout sb;
- sb = sb+" "+"SANYA, KADA VIEBISH MILFU! :)";
- amaout sb;
- amaout sqroot(144);
+ out sa;
+ sb = " ";
+ out sb;
+ sb = sb+" "+"SANYA, VIEBISH MILFU! :)";
+ out sb;
+ out sqroot(36);
 }
 

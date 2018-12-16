@@ -95,32 +95,31 @@
 #define KeyPrint\
 	{ {\
 	"",\
-	7,\
-	FST::NODE(1, FST::RELATION('a', 1)),\
-	FST::NODE(1, FST::RELATION('m', 2)),\
-	FST::NODE(1, FST::RELATION('a', 3)),\
-	FST::NODE(1, FST::RELATION('o', 4)),\
-	FST::NODE(1, FST::RELATION('u', 5)),\
-	FST::NODE(1, FST::RELATION('t', 6)),\
+	4,\
+	FST::NODE(1, FST::RELATION('o', 1)),\
+	FST::NODE(1, FST::RELATION('u', 2)),\
+	FST::NODE(1, FST::RELATION('t', 3)),\
 	FST::NODE()},LEX_PRINT,IT::NDEFT, IT::NDEFD}
 
 #define KeyInteger\
 	{ {\
 	"",\
 	4,\
-	FST::NODE(1, FST::RELATION('n', 1)),\
-	FST::NODE(1, FST::RELATION('u', 2)),\
-	FST::NODE(1, FST::RELATION('m', 3)),\
+	FST::NODE(1, FST::RELATION('i', 1)),\
+	FST::NODE(1, FST::RELATION('n', 2)),\
+	FST::NODE(1, FST::RELATION('t', 3)),\
 	FST::NODE()},LEX_INTEGER,IT::V,IT::INT}
 
 #define  KeyString\
 	{ {\
 	"",\
-	5,\
-	FST::NODE(1, FST::RELATION('l', 1)),\
-	FST::NODE(1, FST::RELATION('i', 2)),\
-	FST::NODE(1, FST::RELATION('s', 3)),\
-	FST::NODE(1, FST::RELATION('t', 4)),\
+	7,\
+	FST::NODE(1, FST::RELATION('s', 1)),\
+	FST::NODE(1, FST::RELATION('t', 2)),\
+	FST::NODE(1, FST::RELATION('r', 3)),\
+	FST::NODE(1, FST::RELATION('i', 4)),\
+	FST::NODE(1, FST::RELATION('n', 5)),\
+	FST::NODE(1, FST::RELATION('g', 6)),\
 	FST::NODE()},LEX_STRING, IT::V, IT::STR}
 
 

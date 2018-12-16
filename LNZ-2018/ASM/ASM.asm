@@ -19,10 +19,9 @@ outint PROTO : SDWORD
 	_Lit2 SDWORD 5
 	_Lit3 SDWORD 3
 	_Lit4 BYTE "AGA", 0
-	_Lit5 BYTE "PRiVET", 0
-	_Lit6 BYTE " ", 0
-	_Lit7 BYTE "SANYA, KADA VIEBISH MILFU! :)", 0
-	_Lit8 SDWORD 144
+	_Lit5 BYTE " ", 0
+	_Lit6 BYTE "SANYA, VIEBISH MILFU! :)", 0
+	_Lit7 SDWORD 36
 .data
 	func_z SDWORD 0
 	main_x SDWORD 0
@@ -94,11 +93,11 @@ main PROC
 	call outstr
 
 	push offset main_sb
-	push offset _Lit6
+	push offset _Lit5
 	call strcon
 	jo EXIT_OVERFLOW
 	push eax
-	push offset _Lit7
+	push offset _Lit6
 	call strcon
 	jo EXIT_OVERFLOW
 	push eax
@@ -108,7 +107,7 @@ main PROC
 	push offset main_sb
 	call outstr
 
-	push _Lit8
+	push _Lit7
 	call sqroot
 	push eax
 	call outint
