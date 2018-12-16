@@ -48,7 +48,7 @@ extern "C"
 	{
 		std::cout << i << std::endl;
 	}
-	int _stdcall sqroot(int i)
+	int _stdcall squadro(int i)
 	{
 		return (int)std::sqrt(i);
 	}

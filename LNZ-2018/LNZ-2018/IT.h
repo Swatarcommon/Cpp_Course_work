@@ -13,21 +13,22 @@ namespace IT
 	enum IDDATATYPE {
 		NDEFD = 0,			//неопределен
 		INT = 1,			//ingeter
-		STR = 2
-	};			//string
+		STR = 2,			//string
+		BOOL = 3			//bool
+	};			
 	enum IDTYPE {
 		NDEFT = 0,	//неопределен 
 		V = 1,		//переменная	
 		F = 2,		//функция 
 		L = 3,		//литерал
-		P = 4
-	};		//параметр
+		P = 4		//параметр
+	};	
 
 	struct Entry									// строка таблицы идентефикаторов
 	{
 		int			idxfirstLE;						// индекс первой строки в таблице лексем
-		char		id[30] = "";		// идентефикатор (автоматически усекается до ID_MAXSIZE)
-		IDDATATYPE	iddatatype;					// тип данных
+		char		id[30] = "";					//идентефикатор (автоматически усекается до ID_MAXSIZE)
+		IDDATATYPE	iddatatype;						//тип данных
 		IDTYPE		idtype;
 		char* scope;
 		union
@@ -61,11 +62,11 @@ namespace IT
 
 
 	IdTable Create(						// создать таблицу идентефикаторов	
-		int size			// емкость таблицы идентефикаторов < TI_MAXSIZE 
+		int size						// емкость таблицы идентефикаторов < TI_MAXSIZE 
 	);
 	void Add(							// добавить строку в таблицу идентефикаторов
-		IdTable& idtable,		// экземпляр таблицы идентефикаторов
-		Entry entry				// строка таблицы идентефикаторов
+		IdTable& idtable,				// экземпляр таблицы идентефикаторов
+		Entry entry						// строка таблицы идентефикаторов
 	);
 	Entry Getentry(IdTable& idtable, int n);
 

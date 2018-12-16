@@ -287,11 +287,7 @@ namespace CG
 		case CALL:  str += "\n\tcall "; str += iT.table[idxTI].id;
 			str += "\n\tpush eax";
 			return str; break;
-
-
 		}
-
-
 	}
 
 

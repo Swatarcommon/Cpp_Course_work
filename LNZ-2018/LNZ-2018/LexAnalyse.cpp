@@ -4,6 +4,8 @@
 #include <iostream>
 #include <stack>
 
+#define LENTH_OF_TOKEN_FST_TABLE 22
+
 namespace Lex
 {
 	void LexTableOut(LT::LexTable lextable, Log::LOG log)
@@ -39,6 +41,8 @@ namespace Lex
 			case IT::STR:
 				*log.stream << "string";
 				break;
+			case IT::BOOL:
+				*log.stream << "bool";
 			}
 
 			switch (idtable.table[i].idtype)
@@ -90,6 +94,7 @@ namespace Lex
 			KeyPrint,
 			KeyInteger,
 			KeyString,
+			KeyBool,
 			KeyReturn,
 			KeyLT,
 			KeyId,
@@ -107,7 +112,7 @@ namespace Lex
 		for (int i = 0; i < mas.size; i++)
 		{
 			result = false;
-			for (int j = 0; j < 21; j++)
+			for (int j = 0; j < LENTH_OF_TOKEN_FST_TABLE ; j++)
 			{
 				FstTable[j].SetLexeme(mas.arr[i].string);
 				if (FST::execute(FstTable[j].fst))
@@ -134,7 +139,7 @@ namespace Lex
 							numbfun++;
 
 						break;
-					case LEX_INTEGER: case LEX_STRING:
+					case LEX_INTEGER:  case LEX_BOOL: case LEX_STRING:      //Заносит в таблицу лексем, если это Целочисленные, Строковые или Логические
 
 						IdT.iddatatype = FstTable[j].IdDataType;
 						if (parametrs)
@@ -168,6 +173,9 @@ namespace Lex
 					case LEX_SEMICOLON:
 						IdT.reset();
 						break;
+
+
+					
 					case LEX_NUMBER:
 						/*checkLIT = IT::IsId(idtable, mas.arr[i].string);*/
 						checkLIT = TI_NULLIDX;
@@ -199,8 +207,6 @@ namespace Lex
 						else
 						{
 							LexEl.idxTI = checkLIT;
-
-
 						}
 						break;
 					case LEX_PLUS: case LEX_MINUS:
@@ -223,7 +229,6 @@ namespace Lex
 						}
 						if (checkLIT == TI_NULLIDX)
 						{
-
 							literals++; char l[20] = "_Lit";
 							std::strcat(IdT.id, l);
 							std::strcat(IdT.id, _itoa(literals, l, 10));

@@ -41,7 +41,7 @@ namespace CG
 			for (int i = 0; i < maxSize; i++)
 				Data[i] = new char[TI_STR_MAXSIZE];
 			Data[size++] = BEFORE_DATA_SECTIONS_ENTRY;
-			Data[size++] = "\n\nExitProcess PROTO : DWORD\nsqroot PROTO : DWORD\ncopystr PROTO : DWORD, : DWORD\nstrcon PROTO : DWORD, : DWORD\nsqr PROTO : SDWORD\noutstr PROTO : DWORD\noutint PROTO : SDWORD ";
+			Data[size++] = "\n\nExitProcess PROTO : DWORD\nsquadro PROTO : DWORD\ncopystr PROTO : DWORD, : DWORD\nstrcon PROTO : DWORD, : DWORD\nquadro PROTO : SDWORD\noutstr PROTO : DWORD\noutint PROTO : SDWORD ";
 			Data[size++] = "\n.stack 4096\n.const";
 			Data[size++] = "\n\toverflow db 'ERROR: VARIABLE OVERFLOW', 0 \n\tnull_division db 'ERROR: DIVISION BY ZERO', 0";
 

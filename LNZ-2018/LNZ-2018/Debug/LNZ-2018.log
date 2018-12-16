@@ -1,22 +1,5 @@
-﻿  CodeGenerator.cpp
-d:\coursach\lnz-2018\lnz-2018\codegenerator.cpp(295): warning C4715: CG::generateInstructions: значение возвращается не при всех путях выполнения
-  Errors.cpp
-  FST.cpp
-d:\coursach\lnz-2018\lnz-2018\fst.cpp(59): warning C4267: инициализация: преобразование из "size_t" в "short"; возможна потеря данных
-  GRB.cpp
-  In.cpp
-d:\coursach\lnz-2018\lnz-2018\in.cpp(87): warning C4002: слишком много аргументов для вызова макроса, подобного функции, "ERROR_THROW"
-  IT.cpp
+﻿  LNZ-2018.cpp
   LexAnalyse.cpp
-d:\coursach\lnz-2018\lnz-2018\lexanalyse.cpp(336): warning C4002: слишком много аргументов для вызова макроса, подобного функции, "ERROR_THROW"
-d:\coursach\lnz-2018\lnz-2018\lexanalyse.cpp(353): warning C4002: слишком много аргументов для вызова макроса, подобного функции, "ERROR_THROW"
-  LNZ-2018.cpp
-  Log.cpp
-  LT.cpp
-  MFST.cpp
-  Parm.cpp
-  PolishNotation.cpp
-  SemAnalyse.cpp
-d:\coursach\lnz-2018\lnz-2018\semanalyse.cpp(75): warning C4129: /: неизвестная escape-последовательность
-  stdafx.cpp
+d:\coursach\lnz-2018\lnz-2018\lexanalyse.cpp(340): warning C4002: слишком много аргументов для вызова макроса, подобного функции, "ERROR_THROW"
+d:\coursach\lnz-2018\lnz-2018\lexanalyse.cpp(357): warning C4002: слишком много аргументов для вызова макроса, подобного функции, "ERROR_THROW"
   LNZ-2018.vcxproj -> D:\Coursach\LNZ-2018\Debug\LNZ-2018.exe

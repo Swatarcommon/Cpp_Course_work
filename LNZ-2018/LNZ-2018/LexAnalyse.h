@@ -1,5 +1,5 @@
 #pragma once
-#include "pch.h"
+#include "stdafx.h"
 #include "In.h"
 #include "LT.h"
 #include "Log.h"
@@ -122,6 +122,15 @@
 	FST::NODE(1, FST::RELATION('g', 6)),\
 	FST::NODE()},LEX_STRING, IT::V, IT::STR}
 
+#define KeyBool\
+	{{\
+	"",\
+	5,\
+	FST::NODE(1, FST::RELATION('b', 1)),\
+	FST::NODE(1, FST::RELATION('o', 2)),\
+	FST::NODE(1, FST::RELATION('o', 3)),\
+	FST::NODE(1, FST::RELATION('l', 4)),\
+	FST::NODE()},LEX_BOOL,IT::V,IT::BOOL}
 
 #define KeyDeclare\
 	{ {\

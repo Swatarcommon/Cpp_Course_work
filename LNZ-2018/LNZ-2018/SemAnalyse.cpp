@@ -57,7 +57,7 @@ namespace SA
 	}
 	bool Typecheck(Log::LOG& log, LT::LexTable lextable, IT::IdTable idtable)
 	{
-		int buf = 0; bool str = false; bool operation = false; bool number = false; bool equal = false; bool operation_plus = false;
+		int buf = 0; bool str = false; bool boolean = false; bool operation = false; bool number = false; bool equal = false; bool operation_plus = false;
 		bool er302 = false; bool er303 = false; bool er304 = false; bool er307 = false; bool error = false;
 		for (int i = 0; i < lextable.size; i++)
 		{
@@ -76,6 +76,8 @@ namespace SA
 						operation = true;
 					if (lextable.table[i].lexema == '+')
 						operation_plus = true;
+					if (idtable.table[lextable.table[i].idxTI].iddatatype == IT::BOOL && idtable.table[lextable.table[i].idxTI].idtype != IT::F)
+						boolean = true;
 					if (idtable.table[lextable.table[i].idxTI].iddatatype == IT::STR && idtable.table[lextable.table[i].idxTI].idtype != IT::F)
 						str = true;
 					if (idtable.table[lextable.table[i].idxTI].iddatatype == IT::INT && idtable.table[lextable.table[i].idxTI].idtype != IT::F)
@@ -95,6 +97,12 @@ namespace SA
 						er302 = true;
 						error = true;
 
+					}
+					if(operation && boolean && !er304)
+					{
+						Log::WriteError(log, Error::geterrorin(304, lextable.table[i].sn, -1));
+						er304 = true;
+						error = true;
 					}
 					if (operation && str && !er303)
 					{

@@ -1,0 +1,27 @@
+int function func(int x, int y)
+{
+  var int z;
+  z = 2*(x + y);
+  return z;
+};
+main
+{
+ var int x;
+ var bool a;
+ var int y;
+ var int z;
+ var string sa;
+ var string sb;
+ x = 1;
+ out x; 
+ y = 3; 
+ out y;
+ sa = "AGA";
+ out sa;
+ sb = "AS";
+ out sb;
+ sb = sb+" "+"SANYA, VIEBISH MILFU!:)";
+ out sb;
+ out squadro(144);
+}
+

@@ -142,8 +142,8 @@ namespace PN
 			{
 				if (strcmp(idtable.table[lextable.table[forpos].idxTI].id, "strcon") != 0
 					&& strcmp(idtable.table[lextable.table[forpos].idxTI].id, "copystr") != 0
-					&& strcmp(idtable.table[lextable.table[forpos].idxTI].id, "sqroot") != 0
-					&& strcmp(idtable.table[lextable.table[forpos].idxTI].id, "sqr") != 0
+					&& strcmp(idtable.table[lextable.table[forpos].idxTI].id, "squadro") != 0
+					&& strcmp(idtable.table[lextable.table[forpos].idxTI].id, "quadro") != 0
 					////&& strcmp(idtable.table[lextable.table[forpos].idxTI].id, "strnum") != 0
 					&& (std::find(vec.begin(), vec.end(), lextable.table[forpos].idxTI) == vec.end()))
 				{

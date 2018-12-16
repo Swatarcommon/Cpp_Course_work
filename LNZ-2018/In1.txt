@@ -1,26 +1,7 @@
-int function func(int x, int y)
-{
-  var int z;
-  z = 2*(x + y);
-  return z;
-};
 main
 {
- var int x;
- var int y;
- var int z;
- var string sa;
- var string sb;
- x = 5;
- out x; 
- y = 3; 
- out y;
- sa = "AGA";
- out sa;
- sb = " ";
- out sb;
- sb = sb+" "+"SANYA, VIEBISH MILFU! :)";
- out sb;
- out sqroot(36);
+ var bool a;
+ var int b;
+ out b;
 }
 

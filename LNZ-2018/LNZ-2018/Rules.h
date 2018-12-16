@@ -1,5 +1,5 @@
 #pragma once
-#include "pch.h"
+#include "stdafx.h"
 #include "GRB.h"
 #define GRB_ERROR_SERIES 200
 namespace GRB
@@ -26,7 +26,7 @@ namespace GRB
 
 		),
 		Rule(NS('N'), GRB_ERROR_SERIES + 1, // ќшибочный оператор
-			25,//c(i>i)N c(i<i)N
+			28,//c(i>i)N c(i<i)N      ол-во наших цепочек
 
 			Rule::Chain(5, TS('d'), TS('n'), TS('i'), TS(';'), NS('N')),							//объ€вление integer
 			Rule::Chain(5, TS('d'), TS('s'), TS('i'), TS(';'), NS('N')),							//объ€вление strin
@@ -34,6 +34,7 @@ namespace GRB
 			Rule::Chain(5, TS('i'), TS('='), NS('E'), TS(';'), NS('N')),							// инициализаци€ идентификатора
 			Rule::Chain(7, TS('d'), TS('n'), TS('i'), TS('='), NS('E'), TS(';'), NS('N')),			// объ€вл.+иниц. integer
 			Rule::Chain(7, TS('d'), TS('s'), TS('i'), TS('='), NS('E'), TS(';'), NS('N')),			// объ€вл.+иниц. string
+			Rule::Chain(7, TS('d'), TS('k'), TS('i'), TS('='), NS('E'), TS(';'), NS('N')),			// объ€вл.+иниц. bool
 			Rule::Chain(4, TS('p'), TS('i'), TS(';'), NS('N')),										// вывод идентификатора
 			Rule::Chain(4, TS('p'), TS('l'), TS(';'), NS('N')),										// вывод литерала
 			Rule::Chain(8, TS('i'), TS('='), TS('i'), TS('('), NS('W'), TS(')'), TS(';'), NS('N')),	// присваение ид-ру рез-та вызова ф-ии
@@ -44,9 +45,11 @@ namespace GRB
 
 			Rule::Chain(4, TS('d'), TS('n'), TS('i'), TS(';')),
 			Rule::Chain(4, TS('d'), TS('s'), TS('i'), TS(';')),
+			Rule::Chain(4, TS('d'), TS('k'), TS('i'), TS(';')),
 			Rule::Chain(4, TS('i'), TS('='), NS('E'), TS(';')),
 			Rule::Chain(6, TS('d'), TS('n'), TS('i'), TS('='), NS('E'), TS(';')),
 			Rule::Chain(6, TS('d'), TS('s'), TS('i'), TS('='), NS('E'), TS(';')),
+			Rule::Chain(6, TS('d'), TS('k'), TS('i'), TS('='), NS('E'), TS(';')),
 			Rule::Chain(3, TS('p'), TS('i'), TS(';')),
 			Rule::Chain(3, TS('p'), TS('l'), TS(';')),
 			Rule::Chain(7, TS('i'), TS('='), TS('i'), TS('('), NS('W'), TS(')'), TS(';')),
