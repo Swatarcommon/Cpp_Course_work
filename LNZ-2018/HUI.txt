@@ -20,7 +20,7 @@ main
  out sa;
  sb = "AS";
  out sb;
- sb = sb+" "+"SANYA, VIEBISH MILFU!:)";
+ sb = sb+" "+"SANYA";
  out sb;
  out squadro(144);
 }
