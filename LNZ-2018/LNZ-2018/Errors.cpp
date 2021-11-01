@@ -1,69 +1,69 @@
 #include "stdafx.h"
 #include "Errors.h"
 
-// Серии ошибок: 0-99 - системные ошибки
-//				100-109 - ошибки параметров
-//				110-119 - ошибка открытия и чтения файлов
+// Г‘ГҐГ°ГЁГЁ Г®ГёГЁГЎГ®ГЄ: 0-99 - Г±ГЁГ±ГІГҐГ¬Г­Г»ГҐ Г®ГёГЁГЎГЄГЁ
+//				100-109 - Г®ГёГЁГЎГЄГЁ ГЇГ Г°Г Г¬ГҐГІГ°Г®Гў
+//				110-119 - Г®ГёГЁГЎГЄГ  Г®ГІГЄГ°Г»ГІГЁГї ГЁ Г·ГІГҐГ­ГЁГї ГґГ Г©Г«Г®Гў
 
 namespace Error
 {
 	ERROR errors[ERROR_MAX_ENTRY] =
 	{
-		ERROR_ENTRY(0, "[SYSTEM]Недопустимый код ошибки"),
+		ERROR_ENTRY(0, "[SYSTEM]ГЌГҐГ¤Г®ГЇГіГ±ГІГЁГ¬Г»Г© ГЄГ®Г¤ Г®ГёГЁГЎГЄГЁ"),
 		ERROR_ENTRY_NODEF(1),
 		ERROR_ENTRY_NODEF(2),ERROR_ENTRY_NODEF(3),ERROR_ENTRY_NODEF(4),ERROR_ENTRY_NODEF(5),
 		ERROR_ENTRY_NODEF(6),ERROR_ENTRY_NODEF(7),ERROR_ENTRY_NODEF(8),ERROR_ENTRY_NODEF(9),
 		ERROR_ENTRY_NODEF10(10),ERROR_ENTRY_NODEF10(20),ERROR_ENTRY_NODEF10(30),ERROR_ENTRY_NODEF10(40),ERROR_ENTRY_NODEF10(50),
 		ERROR_ENTRY_NODEF10(60),ERROR_ENTRY_NODEF10(70),ERROR_ENTRY_NODEF10(80),ERROR_ENTRY_NODEF10(90),
-		ERROR_ENTRY(100, "[SYSTEM]Параметр -in должен быть задан обязательно!"),
+		ERROR_ENTRY(100, "[SYSTEM]ГЏГ Г°Г Г¬ГҐГІГ° -in Г¤Г®Г«Г¦ГҐГ­ ГЎГ»ГІГј Г§Г Г¤Г Г­ Г®ГЎГїГ§Г ГІГҐГ«ГјГ­Г®!"),
 		ERROR_ENTRY_NODEF(101),ERROR_ENTRY_NODEF(102),ERROR_ENTRY_NODEF(103),
-		ERROR_ENTRY(104, "[SYSTEM]Превышена длина входного параметра"),
+		ERROR_ENTRY(104, "[SYSTEM]ГЏГ°ГҐГўГ»ГёГҐГ­Г  Г¤Г«ГЁГ­Г  ГўГµГ®Г¤Г­Г®ГЈГ® ГЇГ Г°Г Г¬ГҐГІГ°Г "),
 		ERROR_ENTRY_NODEF(105),ERROR_ENTRY_NODEF(106),ERROR_ENTRY_NODEF(107),
 		ERROR_ENTRY_NODEF(108),ERROR_ENTRY_NODEF(109),
 
-		ERROR_ENTRY(110, "[SYSTEM]Ошибка при открытии файла с исходным кодом(-in)"),
-		ERROR_ENTRY(111, "[SYSTEM]Недопустимый символ в исходном файле(-in)"),
-		ERROR_ENTRY(112, "[SYSTEM]Ошибка при создании файла протокола(-log)"),
-		ERROR_ENTRY(113, "[SYN]Отстутствуют закрывающие кавычки"),
-		ERROR_ENTRY(114,"[LEX]Слишком длинный строковый литерал"),ERROR_ENTRY_NODEF(115),
-		ERROR_ENTRY(115,"[SYSTEM]Слишком большой текст исходного кода"),
+		ERROR_ENTRY(110, "[SYSTEM]ГЋГёГЁГЎГЄГ  ГЇГ°ГЁ Г®ГІГЄГ°Г»ГІГЁГЁ ГґГ Г©Г«Г  Г± ГЁГ±ГµГ®Г¤Г­Г»Г¬ ГЄГ®Г¤Г®Г¬(-in)"),
+		ERROR_ENTRY(111, "[SYSTEM]ГЌГҐГ¤Г®ГЇГіГ±ГІГЁГ¬Г»Г© Г±ГЁГ¬ГўГ®Г« Гў ГЁГ±ГµГ®Г¤Г­Г®Г¬ ГґГ Г©Г«ГҐ(-in)"),
+		ERROR_ENTRY(112, "[SYSTEM]ГЋГёГЁГЎГЄГ  ГЇГ°ГЁ Г±Г®Г§Г¤Г Г­ГЁГЁ ГґГ Г©Г«Г  ГЇГ°Г®ГІГ®ГЄГ®Г«Г (-log)"),
+		ERROR_ENTRY(113, "[SYN]ГЋГІГ±ГІГіГІГ±ГІГўГіГѕГІ Г§Г ГЄГ°Г»ГўГ ГѕГ№ГЁГҐ ГЄГ ГўГ»Г·ГЄГЁ"),
+		ERROR_ENTRY(114,"[LEX]Г‘Г«ГЁГёГЄГ®Г¬ Г¤Г«ГЁГ­Г­Г»Г© Г±ГІГ°Г®ГЄГ®ГўГ»Г© Г«ГЁГІГҐГ°Г Г«"),ERROR_ENTRY_NODEF(115),
+		ERROR_ENTRY(115,"[SYSTEM]Г‘Г«ГЁГёГЄГ®Г¬ ГЎГ®Г«ГјГёГ®Г© ГІГҐГЄГ±ГІ ГЁГ±ГµГ®Г¤Г­Г®ГЈГ® ГЄГ®Г¤Г "),
 		ERROR_ENTRY_NODEF(117),ERROR_ENTRY_NODEF(118),ERROR_ENTRY_NODEF(119),
-		ERROR_ENTRY(120, "[LEX]Превышена максимальная длина идентификатора (>10). Усечение до 10"),
-		ERROR_ENTRY(121,"[LEX]Дублирование имени функции"),
-		ERROR_ENTRY(122,"[LEX]Дублирование имени идентификатора или отсутствие области видимости"),
-		ERROR_ENTRY(123,"[LEX]Неизвестная лексема"),
-		ERROR_ENTRY(124,"[LEX]Неизвестный идентификатор"),
-		ERROR_ENTRY(125,"[SEM]Отсутствует точка входа main"),
-		ERROR_ENTRY(126,"[SEM]Дублирование точки входа main"),
+		ERROR_ENTRY(120, "[LEX]ГЏГ°ГҐГўГ»ГёГҐГ­Г  Г¬Г ГЄГ±ГЁГ¬Г Г«ГјГ­Г Гї Г¤Г«ГЁГ­Г  ГЁГ¤ГҐГ­ГІГЁГґГЁГЄГ ГІГ®Г°Г  (>10). Г“Г±ГҐГ·ГҐГ­ГЁГҐ Г¤Г® 10"),
+		ERROR_ENTRY(121,"[LEX]Г„ГіГЎГ«ГЁГ°Г®ГўГ Г­ГЁГҐ ГЁГ¬ГҐГ­ГЁ ГґГіГ­ГЄГ¶ГЁГЁ"),
+		ERROR_ENTRY(122,"[LEX]Г„ГіГЎГ«ГЁГ°Г®ГўГ Г­ГЁГҐ ГЁГ¬ГҐГ­ГЁ ГЁГ¤ГҐГ­ГІГЁГґГЁГЄГ ГІГ®Г°Г  ГЁГ«ГЁ Г®ГІГ±ГіГІГ±ГІГўГЁГҐ Г®ГЎГ«Г Г±ГІГЁ ГўГЁГ¤ГЁГ¬Г®Г±ГІГЁ"),
+		ERROR_ENTRY(123,"[LEX]ГЌГҐГЁГ§ГўГҐГ±Г­Г Гї Г«ГҐГЄГ±ГҐГ¬Г "),
+		ERROR_ENTRY(124,"[LEX]ГЌГҐГЁГ§ГўГҐГ±ГІГ­Г»Г© ГЁГ¤ГҐГ­ГІГЁГґГЁГЄГ ГІГ®Г°"),
+		ERROR_ENTRY(125,"[SEM]ГЋГІГ±ГіГІГ±ГІГўГіГҐГІ ГІГ®Г·ГЄГ  ГўГµГ®Г¤Г  main"),
+		ERROR_ENTRY(126,"[SEM]Г„ГіГЎГ«ГЁГ°Г®ГўГ Г­ГЁГҐ ГІГ®Г·ГЄГЁ ГўГµГ®Г¤Г  main"),
 		ERROR_ENTRY_NODEF(127),
 		ERROR_ENTRY_NODEF(128),
 		ERROR_ENTRY_NODEF(129),
 		ERROR_ENTRY_NODEF10(130),ERROR_ENTRY_NODEF10(140),ERROR_ENTRY_NODEF10(150),ERROR_ENTRY_NODEF10(160),
 		ERROR_ENTRY_NODEF10(170),ERROR_ENTRY_NODEF10(180),ERROR_ENTRY_NODEF10(190),
 
-		ERROR_ENTRY(200, "[SYN]Неверная структура программы"), //блок ошибок синтаксического анализатора
-		ERROR_ENTRY(201, "[SYN]Ошибочный оператор"),
-		ERROR_ENTRY(202, "[SYN]Ошибка в выражении"),
-		ERROR_ENTRY(203, "[SYN]Ошибка в расстановке знаков или скобок"),
-		ERROR_ENTRY(204, "[SYN]Ошибка в формальных параметрах"),
-		ERROR_ENTRY(205, "[SYN]Ошибка в параметрах вызываемой функции"),
+		ERROR_ENTRY(200, "[SYN]ГЌГҐГўГҐГ°Г­Г Гї Г±ГІГ°ГіГЄГІГіГ°Г  ГЇГ°Г®ГЈГ°Г Г¬Г¬Г»"), //ГЎГ«Г®ГЄ Г®ГёГЁГЎГ®ГЄ Г±ГЁГ­ГІГ ГЄГ±ГЁГ·ГҐГ±ГЄГ®ГЈГ® Г Г­Г Г«ГЁГ§Г ГІГ®Г°Г 
+		ERROR_ENTRY(201, "[SYN]ГЋГёГЁГЎГ®Г·Г­Г»Г© Г®ГЇГҐГ°Г ГІГ®Г°"),
+		ERROR_ENTRY(202, "[SYN]ГЋГёГЁГЎГЄГ  Гў ГўГ»Г°Г Г¦ГҐГ­ГЁГЁ"),
+		ERROR_ENTRY(203, "[SYN]ГЋГёГЁГЎГЄГ  Гў Г°Г Г±Г±ГІГ Г­Г®ГўГЄГҐ Г§Г­Г ГЄГ®Гў ГЁГ«ГЁ Г±ГЄГ®ГЎГ®ГЄ"),
+		ERROR_ENTRY(204, "[SYN]ГЋГёГЁГЎГЄГ  Гў ГґГ®Г°Г¬Г Г«ГјГ­Г»Гµ ГЇГ Г°Г Г¬ГҐГІГ°Г Гµ"),
+		ERROR_ENTRY(205, "[SYN]ГЋГёГЁГЎГЄГ  Гў ГЇГ Г°Г Г¬ГҐГІГ°Г Гµ ГўГ»Г§Г»ГўГ ГҐГ¬Г®Г© ГґГіГ­ГЄГ¶ГЁГЁ"),
 		ERROR_ENTRY_NODEF(206),
 		ERROR_ENTRY_NODEF(207), ERROR_ENTRY_NODEF(208), ERROR_ENTRY_NODEF(209),
 		ERROR_ENTRY_NODEF10(210), ERROR_ENTRY_NODEF10(220), ERROR_ENTRY_NODEF10(230), ERROR_ENTRY_NODEF10(240), ERROR_ENTRY_NODEF10(250),
 		ERROR_ENTRY_NODEF10(260), ERROR_ENTRY_NODEF10(270), ERROR_ENTRY_NODEF10(280), ERROR_ENTRY_NODEF10(290),
 
-		//семантический анализ
-		ERROR_ENTRY(300, "[SEM]Несовпадение типов параметров функции"),
-		ERROR_ENTRY(301,"[SEM]Несовпадение количества параметров функции"),
-		ERROR_ENTRY(302,"[SEM]Присвоение аргументу не соответствующий тип"),
-		ERROR_ENTRY(303,"[SEM]Недопустимые операции со строками"),ERROR_ENTRY(304,"[SEM]Операция над разными типами"),
-		ERROR_ENTRY(305,"[SEM]Функция возвращает неверный тип"),ERROR_ENTRY(306,"[SEM]Вызов не существующей функции"),
-		ERROR_ENTRY(307,"[SEM]Число выходит за границы допустимого"),
-		ERROR_ENTRY(308,"[SEM]Нельзя изменять строковые параметры функции"),ERROR_ENTRY_NODEF(309),ERROR_ENTRY_NODEF10(310),
+		//Г±ГҐГ¬Г Г­ГІГЁГ·ГҐГ±ГЄГЁГ© Г Г­Г Г«ГЁГ§
+		ERROR_ENTRY(300, "[SEM]ГЌГҐГ±Г®ГўГЇГ Г¤ГҐГ­ГЁГҐ ГІГЁГЇГ®Гў ГЇГ Г°Г Г¬ГҐГІГ°Г®Гў ГґГіГ­ГЄГ¶ГЁГЁ"),
+		ERROR_ENTRY(301,"[SEM]ГЌГҐГ±Г®ГўГЇГ Г¤ГҐГ­ГЁГҐ ГЄГ®Г«ГЁГ·ГҐГ±ГІГўГ  ГЇГ Г°Г Г¬ГҐГІГ°Г®Гў ГґГіГ­ГЄГ¶ГЁГЁ"),
+		ERROR_ENTRY(302,"[SEM]ГЏГ°ГЁГ±ГўГ®ГҐГ­ГЁГҐ Г Г°ГЈГіГ¬ГҐГ­ГІГі Г­ГҐ Г±Г®Г®ГІГўГҐГІГ±ГІГўГіГѕГ№ГЁГ© ГІГЁГЇ"),
+		ERROR_ENTRY(303,"[SEM]ГЌГҐГ¤Г®ГЇГіГ±ГІГЁГ¬Г»ГҐ Г®ГЇГҐГ°Г Г¶ГЁГЁ Г±Г® Г±ГІГ°Г®ГЄГ Г¬ГЁ"),ERROR_ENTRY(304,"[SEM]ГЋГЇГҐГ°Г Г¶ГЁГї Г­Г Г¤ Г°Г Г§Г­Г»Г¬ГЁ ГІГЁГЇГ Г¬ГЁ"),
+		ERROR_ENTRY(305,"[SEM]Г”ГіГ­ГЄГ¶ГЁГї ГўГ®Г§ГўГ°Г Г№Г ГҐГІ Г­ГҐГўГҐГ°Г­Г»Г© ГІГЁГЇ"),ERROR_ENTRY(306,"[SEM]Г‚Г»Г§Г®Гў Г­ГҐ Г±ГіГ№ГҐГ±ГІГўГіГѕГ№ГҐГ© ГґГіГ­ГЄГ¶ГЁГЁ"),
+		ERROR_ENTRY(307,"[SEM]Г—ГЁГ±Г«Г® ГўГ»ГµГ®Г¤ГЁГІ Г§Г  ГЈГ°Г Г­ГЁГ¶Г» Г¤Г®ГЇГіГ±ГІГЁГ¬Г®ГЈГ®"),
+		ERROR_ENTRY(308,"[SEM]ГЌГҐГ«ГјГ§Гї ГЁГ§Г¬ГҐГ­ГїГІГј Г±ГІГ°Г®ГЄГ®ГўГ»ГҐ ГЇГ Г°Г Г¬ГҐГІГ°Г» ГґГіГ­ГЄГ¶ГЁГЁ"),ERROR_ENTRY_NODEF(309),ERROR_ENTRY_NODEF10(310),
 		ERROR_ENTRY_NODEF10(320), ERROR_ENTRY_NODEF10(330), ERROR_ENTRY_NODEF10(340), ERROR_ENTRY_NODEF10(350),
 		ERROR_ENTRY_NODEF10(360), ERROR_ENTRY_NODEF10(370), ERROR_ENTRY_NODEF10(380), ERROR_ENTRY_NODEF10(390),
 
-		//генерация
+		//ГЈГҐГ­ГҐГ°Г Г¶ГЁГї
 		ERROR_ENTRY_NODEF100(400),ERROR_ENTRY_NODEF100(500),ERROR_ENTRY_NODEF100(600),
 		ERROR_ENTRY_NODEF100(700),ERROR_ENTRY_NODEF100(800),ERROR_ENTRY_NODEF100(900)
 	};
