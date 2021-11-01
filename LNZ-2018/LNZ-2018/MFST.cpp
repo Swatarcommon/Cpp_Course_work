@@ -6,7 +6,7 @@
 using namespace MFST;
 
 int FST_TRACE_n = -1;
-char rbuf[205], sbuf[205], lbuf[1024]; // печать
+char rbuf[205], sbuf[205], lbuf[1024]; // ГЇГҐГ·Г 
 MfstState::MfstState()
 {
 	lenta_position = 0;
@@ -145,8 +145,8 @@ bool	Mfst::start(Log::LOG& log)
 	{
 	case LENTA_END:			MFST_TRACE4("------>LENTA_END")
 		*log.stream << "----------------------------------------------------------------------" << std::endl;
-		sprintf_s(buf, MFST_DIAGN_MAXSIZE, "%d: всего строк %d, синтаксический анализ выполнен без ошибок", 0, lenta_size);
-		*log.stream << std::setw(4) << std::left << 0 << ": всего строк " << lenta_size << ", синтаксический анализ выполнен без ошибок" << std::endl;
+		sprintf_s(buf, MFST_DIAGN_MAXSIZE, "%d: ГўГ±ГҐГЈГ® Г±ГІГ°Г®ГЄ %d, Г±ГЁГ­ГІГ ГЄГ±ГЁГ·ГҐГ±ГЄГЁГ© Г Г­Г Г«ГЁГ§ ГўГ»ГЇГ®Г«Г­ГҐГ­ ГЎГҐГ§ Г®ГёГЁГЎГ®ГЄ", 0, lenta_size);
+		*log.stream << std::setw(4) << std::left << 0 << ": ГўГ±ГҐГЈГ® Г±ГІГ°Г®ГЄ " << lenta_size << ", Г±ГЁГ­ГІГ ГЄГ±ГЁГ·ГҐГ±ГЄГЁГ© Г Г­Г Г«ГЁГ§ ГўГ»ГЇГ®Г«Г­ГҐГ­ ГЎГҐГ§ Г®ГёГЁГЎГ®ГЄ" << std::endl;
 		rc = true;
 		break;
 	case NS_NORULE:			MFST_TRACE4("------>NS_NORULE");
@@ -185,14 +185,14 @@ char*	Mfst::getDiagnosis(short n, char* buf)
 	{
 		errid = grebach.getRule(diagnosis[n].nrule).iderror;
 		Error::ERROR err = Error::geterror(errid);
-		sprintf_s(buf, MFST_DIAGN_MAXSIZE, "%d: строка %d, %s", errid, lex.table[lpos].sn, err.message);
+		sprintf_s(buf, MFST_DIAGN_MAXSIZE, "%d: Г±ГІГ°Г®ГЄГ  %d, %s", errid, lex.table[lpos].sn, err.message);
 		rc = buf;
 	};
 	return rc;
 }
 void	Mfst::printrules(Log::LOG log)
 {
-	*log.stream << "Синтаксический анализ - Выполнен" << std::endl;
+	*log.stream << "Г‘ГЁГ­ГІГ ГЄГ±ГЁГ·ГҐГ±ГЄГЁГ© Г Г­Г Г«ГЁГ§ - Г‚Г»ГЇГ®Г«Г­ГҐГ­" << std::endl;
 	MfstState state;
 	GRB::Rule rule;
 	for (unsigned short k = 0; k < storestate.size(); k++)
