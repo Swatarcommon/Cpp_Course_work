@@ -1,7 +1,7 @@
 main
 {
  var bool a;
- var int b;
+ var int c;
  out b;
 }
 
