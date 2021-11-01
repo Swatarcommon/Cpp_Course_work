@@ -18,7 +18,7 @@ namespace CG
 		{
 			if (idtable.table[i].idtype == IT::L && idtable.table[i].iddatatype == IT::STR)
 			{
-				str += "\n\t"; str += idtable.table[i].id; str += " BYTE ";
+				str += "\n"; str += idtable.table[i].id; str += " BYTE ";
 				str += idtable.table[i].value.vstr->str;
 				str += ", 0";
 				strcpy(cnst.Data[cnst.size++], str.c_str());
@@ -279,7 +279,7 @@ namespace CG
 		case SEM:	if (idxTI != -1 && iT.table[idxTI].iddatatype == IT::INT && iT.table[idxTI].idtype != IT::F) {
 			str += "\n\tpop "; str += iT.table[idxTI].id;
 		}
-					else if (idxTI != -1 && iT.table[idxTI].iddatatype == IT::STR) {  // Если это строковый литерал
+					else if (idxTI != -1 && iT.table[idxTI].iddatatype == IT::STR) {  // Г…Г±Г«ГЁ ГЅГІГ® Г±ГІГ°Г®ГЄГ®ГўГ»Г© Г«ГЁГІГҐГ°Г Г«
 			str += "\n\tpush offset "; str += iT.table[idxTI].id;
 			str += "\n\tcall copystr\n";
 		}	return str; break;
@@ -312,7 +312,7 @@ namespace CG
 	}
 	void startGeneration(const char* file, ConstSegment& CnstS, DataSegment& DS, CodeSegment& CS)
 	{
-		std::ofstream _file; _file.open(file, std::ios_base::out | std::ios_base::trunc);						//Запись нашего ассемблера в файл
+		std::ofstream _file; _file.open(file, std::ios_base::out | std::ios_base::trunc);						//Г‡Г ГЇГЁГ±Гј Г­Г ГёГҐГЈГ® Г Г±Г±ГҐГ¬ГЎГ«ГҐГ°Г  Гў ГґГ Г©Г«
 		if (_file.is_open())
 		{
 			remove(file);
